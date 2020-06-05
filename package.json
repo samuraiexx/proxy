@@ -1,0 +1,27 @@
+{
+  "name": "redirect",
+  "version": "1.0.0",
+  "description": "Use Express to redirect to Env.URL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuraiexx/redirect.git"
+  },
+  "keywords": [
+    "301",
+    "redirect"
+  ],
+  "author": "SamuraiExx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuraiexx/redirect/issues"
+  },
+  "homepage": "https://github.com/samuraiexx/redirect#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
