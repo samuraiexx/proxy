@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const targetBaseUrl = process.env.URL;
+const targetBaseUrl = process.env.REDIRECT_URL;
 
 function handleRedirect(req, res) {
   const targetUrl = targetBaseUrl + req.originalUrl;
