@@ -5,6 +5,7 @@ const app = express();
 
 app.use('*', createProxyMiddleware({
   target: process.env.PROXY_TARGET_URL,
+  changeOrigin: true,
   headers: {
     "Connection": "keep-alive"
   }
