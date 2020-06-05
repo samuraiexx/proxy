@@ -1,12 +1,14 @@
 const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
 const app = express();
-const targetBaseUrl = process.env.REDIRECT_URL;
 
-function handleRedirect(req, res) {
-  const targetUrl = targetBaseUrl + req.originalUrl;
-  res.redirect(targetUrl);
-}
+app.use('*', createProxyMiddleware({
+  target: process.env.PROXY_TARGET_URL,
+  headers: {
+    "Connection": "keep-alive"
+  }
+}));
 
-app.get('*', handleRedirect);
 const port = process.env.PORT || 3000;
 app.listen(port);
