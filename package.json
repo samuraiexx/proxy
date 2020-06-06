@@ -1,7 +1,7 @@
 {
   "name": "redirect",
   "version": "1.0.0",
-  "description": "Use Express to redirect to Env.URL",
+  "description": "Use Express to redirect to Env.PROXY_TARGET_URL",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
